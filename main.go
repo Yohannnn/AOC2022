@@ -1,17 +1,19 @@
 package main
 
 import (
-	"AOC2022/day2"
+	"AOC2022/day3"
 	"bufio"
 	"fmt"
 	"os"
 )
 
-const day = 2
+const day = 3
 
 var input []string
 
 func main() {
+
+	// Gets input for current day
 	file, err := os.Open(fmt.Sprintf("day%d/input.txt", day))
 	if err != nil {
 		fmt.Println(err)
@@ -23,6 +25,5 @@ func main() {
 		input = append(input, scanner.Text())
 	}
 
-	day2.Part1(input)
-	day2.Part2(input)
+	day3.Part2(input)
 }

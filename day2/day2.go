@@ -6,13 +6,17 @@ import (
 )
 
 func Part1(input []string) {
+	// Variables
 	var score int
 
 	// Loop through input
 	for _, l := range input {
+		// Gets the current moves and adds the score to the total
 		moves := strings.Split(l, " ")
 		score += calcScore(moves)
 	}
+
+	// Print the total score
 	fmt.Println(score)
 }
 
@@ -23,6 +27,7 @@ func Part2(input []string) {
 
 	// Loop through input
 	for _, l := range input {
+		// Gets the correct player move
 		command := strings.Split(l, " ")
 		switch command[0] {
 		case "A":
@@ -54,8 +59,10 @@ func Part2(input []string) {
 			}
 
 		}
+		// Calculates the score and adds it to the total
 		score += calcScore(moves)
 	}
+	// Prints the total score
 	fmt.Println(score)
 }
 

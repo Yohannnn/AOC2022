@@ -7,11 +7,18 @@ import (
 )
 
 func Run(input []string) {
+	// Variables
 	var currentCal int
 	var top3 [3]int
+	var sum int
+
+	// Loop through input
 	for _, l := range input {
+		// Get cal value and add it to the current cal count for this elf
 		cal, _ := strconv.Atoi(l)
 		currentCal += cal
+
+		// If it's the end of the elf's list, check if the current cal count is higher than the lowest of the top 3
 		if l == "" {
 			sort.Ints(top3[:])
 			if currentCal > top3[0] {
@@ -21,10 +28,12 @@ func Run(input []string) {
 		}
 	}
 
-	var sum int
+	// Add the top 3 together
 	for _, c := range top3 {
 		sum += c
 	}
+
+	// Print the results
 	fmt.Println(top3[2])
 	fmt.Println(sum)
 }
