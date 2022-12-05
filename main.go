@@ -1,13 +1,13 @@
 package main
 
 import (
-	"AOC2022/day4"
+	"AOC2022/day5"
 	"bufio"
 	"fmt"
 	"os"
 )
 
-const day = 4
+const day = 5
 
 var input []string
 
@@ -18,12 +18,15 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	defer file.Close()
 	scanner := bufio.NewScanner(file)
 
 	for scanner.Scan() {
 		input = append(input, scanner.Text())
 	}
+	err = file.Close()
+	if err != nil {
+		fmt.Println(err)
+	}
 
-	day4.Part2(input)
+	day5.Part2(input)
 }
