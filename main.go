@@ -28,5 +28,6 @@ func main() {
 		fmt.Println(err)
 	}
 
+	day5.Part1(input)
 	day5.Part2(input)
 }
