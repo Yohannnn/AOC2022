@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-const day = 7
+const day = 1
 
 var input []string
 
@@ -19,7 +19,6 @@ func main() {
 		fmt.Println(err)
 	}
 	scanner := bufio.NewScanner(file)
-
 	for scanner.Scan() {
 		input = append(input, scanner.Text())
 	}
