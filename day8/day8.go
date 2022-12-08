@@ -151,7 +151,6 @@ func Part2(input []string) {
 			// Check if the score is the highest
 			if score > topScore {
 				topScore = score
-				fmt.Println(score, i, t)
 			}
 		}
 
