@@ -1,13 +1,13 @@
 package main
 
 import (
-	"AOC2022/day7"
+	"AOC2022/day8"
 	"bufio"
 	"fmt"
 	"os"
 )
 
-const day = 1
+const day = 8
 
 var input []string
 
@@ -27,6 +27,5 @@ func main() {
 		fmt.Println(err)
 	}
 
-	day7.Part1(input)
-	day7.Part2(input)
+	day8.Part2(input)
 }
